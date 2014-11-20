@@ -1,6 +1,7 @@
-require "woothee"
+require "rack/woothee/checker"
+require "rack/woothee/result"
 require "rack/woothee/version"
-require "rack/woothee/helper"
+require "woothee"
 
 module Rack
   class Woothee
@@ -15,6 +16,7 @@ module Rack
   end
 
   class Request
-    include Rack::Woothee::Helper
+    include Rack::Woothee::Result
+    include Rack::Woothee::Checker
   end
 end
