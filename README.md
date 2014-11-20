@@ -1,7 +1,7 @@
 # Rack::Woothee
 
-Rack::Request extension for handling User-Agent.
-By using [woothee](https://github.com/woothee/woothee-ruby), various User-Agents are supported.
+Rack::Request extension for handling User-Agent.  
+Thanks to [woothee](https://github.com/woothee/woothee-ruby), Rack::Woothee supports various User-Agents.
 
 ## Installation
 

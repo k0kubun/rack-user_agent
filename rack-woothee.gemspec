@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Rack::Woothee::VERSION
   spec.authors       = ["Takashi Kokubun"]
   spec.email         = ["takashikkbn@gmail.com"]
-  spec.summary       = %q{Rack middleware to parse User-Agent and set parameters to HTTP::Request.}
-  spec.description   = %q{Rack middleware to parse User-Agent and set parameters to HTTP::Request.}
+  spec.summary       = %q{Rack::Request extension for handling User-Agent.}
+  spec.description   = %q{Rack::Request extension for handling User-Agent.}
   spec.homepage      = "https://github.com/k0kubun/rack-woothee"
   spec.license       = "MIT"
 
