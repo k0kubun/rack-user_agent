@@ -1,7 +1,18 @@
 require "rack/woothee/version"
+require "rack/woothee/helper"
 
 module Rack
-  module Woothee
-    # Your code goes here...
+  class Woothee
+    def initialize(app, options = {})
+      @app = app
+    end
+
+    def call(env)
+      @app.call(env)
+    end
+  end
+
+  class Request
+    include Rack::Woothee::Helper
   end
 end
