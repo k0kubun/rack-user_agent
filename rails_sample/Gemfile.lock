@@ -2,6 +2,7 @@ PATH
   remote: ..
   specs:
     rack-woothee (0.0.1)
+      rack (~> 1.5)
       woothee (~> 1.0.0)
 
 GEM
