@@ -7,9 +7,6 @@ configure do
 end
 
 get "/" do
-  if request.from_smartphone?
-    "smartphone"
-  else
-    "pc"
-  end
+  methods = %i(device_type os os_version browser browser_version browser_vendor)
+  methods.map { |m| "#{m}: #{request.send(m)}" }.join("<br>")
 end
