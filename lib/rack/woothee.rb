@@ -1,7 +1,8 @@
+require "woothee"
 require "rack/woothee/checker"
 require "rack/woothee/result"
 require "rack/woothee/version"
-require "woothee"
+require 'rack/woothee/railtie' if defined?(Rails::Railtie)
 
 module Rack
   class Woothee
