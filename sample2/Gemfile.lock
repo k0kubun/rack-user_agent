@@ -1,3 +1,9 @@
+PATH
+  remote: ..
+  specs:
+    rack-woothee (0.0.1)
+      woothee (~> 1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -108,6 +114,7 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    woothee (1.0.0)
 
 PLATFORMS
   ruby
@@ -116,6 +123,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  rack-woothee!
   rails (= 4.1.5)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
