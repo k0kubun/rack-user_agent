@@ -91,10 +91,10 @@ describe "Rack::Woothee::Detector" do
       end
     end
 
-    # it "returns false if the request comes from device without user-agent" do
-    #   get "/"
-    #   last_request.from_smartphone?.must_equal false
-    # end
+    it "returns false if the request comes from device without user-agent" do
+      get "/"
+      last_request.from_smartphone?.must_equal false
+    end
   end
 
   # describe "#smartphone_version" do

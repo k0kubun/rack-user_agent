@@ -12,7 +12,7 @@ module Rack
     end
 
     def call(env)
-      env["rack.woothee"] = ::Woothee.parse(env["HTTP_USER_AGENT"])
+      env["rack.woothee"] = ::Woothee.parse(env["HTTP_USER_AGENT"] || "")
       @app.call(env)
     end
   end
