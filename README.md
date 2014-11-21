@@ -15,7 +15,7 @@ gem 'rack-user_agent'
 
 ### Rails
 
-If you bundle "rack-user_agent", Rack::UserAgent will be automatically inserted when started.  
+If you bundle "rack-user\_agent", Rack::UserAgent will be automatically inserted when started.  
 Additional methods for `request` will be available with no cost.
 
 ```ruby
