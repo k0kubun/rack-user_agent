@@ -21,10 +21,22 @@ module Rack
       end
 
       def from_android?
-        os == "Android"
+        os == "Android" && android_mobile?
+      end
+
+      def from_android_tablet?
+        os == "Android" && !android_mobile?
+      end
+
+      def from_windows_phone?
+        os == "Windows Phone OS"
       end
 
       private
+
+      def android_mobile?
+        (user_agent =~ /Android.+Mobi(le)?/).nil?.!
+      end
 
       def suppress_unknown(version)
         if version == "UNKNOWN"

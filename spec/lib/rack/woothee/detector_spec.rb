@@ -139,25 +139,25 @@ describe "Rack::Woothee::Detector" do
     end
   end
 
-  # describe "#from_android_tablet?" do
-  #   it "returns true if the request comes from android tablet" do
-  #     user_agents("Android Tablet").each do |ua|
-  #       header "User-Agent", ua
-  #       get "/"
-  #       last_request.from_android_tablet?.must_equal true
-  #     end
-  #   end
-  # end
+  describe "#from_android_tablet?" do
+    it "returns true if the request comes from android tablet" do
+      user_agents("Android Tablet").each do |ua|
+        header "User-Agent", ua
+        get "/"
+        last_request.from_android_tablet?.must_equal true
+      end
+    end
+  end
 
-  # describe "#from_windows_phone?" do
-  #   it "returns true if the request comes from windows phone" do
-  #     user_agents("Windows Phone").each do |ua|
-  #       header "User-Agent", ua
-  #       get "/"
-  #       last_request.from_windows_phone?.must_equal true
-  #     end
-  #   end
-  # end
+  describe "#from_windows_phone?" do
+    it "returns true if the request comes from windows phone" do
+      user_agents("Windows Phone").each do |ua|
+        header "User-Agent", ua
+        get "/"
+        last_request.from_windows_phone?.must_equal true
+      end
+    end
+  end
 
   def user_agents(name)
     SMARTPHONES.find { |info| info[:name] == name }[:user_agents]
