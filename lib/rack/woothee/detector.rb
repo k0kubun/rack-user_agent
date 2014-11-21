@@ -7,7 +7,6 @@ module Rack
     module Detector
       include Result
 
-      alias :smartphone_version :os_version
       def smartphone_version
         suppress_unknown(os_version)
       end
