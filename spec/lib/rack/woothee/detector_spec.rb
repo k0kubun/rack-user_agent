@@ -8,21 +8,21 @@ describe "Rack::Woothee::Detector" do
   SMARTPHONES = [
     {
       name: "iPhone",
-      version: "5_1_1",
+      version: "5.1.1",
       user_agents: [
         "Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3",
       ]
     },
     {
       name: "iPhone",
-      version: "6_0",
+      version: "6.0",
       user_agents: [
         "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A403 Safari/8536.25",
       ]
     },
     {
       name: "iPad",
-      version: "6_0",
+      version: "6.0",
       user_agents: [
         "Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A403 Safari/8536.25"
       ]
@@ -97,17 +97,17 @@ describe "Rack::Woothee::Detector" do
     end
   end
 
-  # describe "#smartphone_version" do
-  #   it "returns version number string if it could be detected" do
-  #     SMARTPHONES.each do |info|
-  #       info[:user_agents].each do |ua|
-  #         header "User-Agent", ua
-  #         get "/"
-  #         last_request.smartphone_version.must_equal info[:version]
-  #       end
-  #     end
-  #   end
-  # end
+  describe "#smartphone_version" do
+    it "returns version number string if it could be detected" do
+      SMARTPHONES.each do |info|
+        info[:user_agents].each do |ua|
+          header "User-Agent", ua
+          get "/"
+          last_request.smartphone_version.must_equal info[:version]
+        end
+      end
+    end
+  end
 
   # describe "#from_iphone?" do
   #   it "returns true if the request comes from iphone" do
