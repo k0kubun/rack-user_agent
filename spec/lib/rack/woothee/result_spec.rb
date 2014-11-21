@@ -20,7 +20,7 @@ describe "Rack::Woothee::Result" do
     }
   end
 
-  it "assigns woothee parse result to env['rack.woothee']" do
+  it "returns proper woothee results" do
     header "User-Agent", ua
     get "/"
 
