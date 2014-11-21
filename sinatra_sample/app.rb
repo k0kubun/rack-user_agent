@@ -3,7 +3,7 @@ require "pry"
 require "rack/woothee"
 
 configure do
-  use Rack::Woothee
+  use Rack::UserAgent
 end
 
 get "/" do

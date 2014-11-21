@@ -3,7 +3,7 @@ require "rack/woothee/result"
 # This module aims to provide APIs compatible with:
 # https://github.com/ihara2525/rack-smartphone_detector
 module Rack
-  class Woothee
+  class UserAgent
     module Detector
       include Result
 

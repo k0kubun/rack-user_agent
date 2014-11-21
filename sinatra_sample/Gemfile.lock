@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    rack-woothee (0.0.1)
+    rack-user_agent (0.0.1)
       woothee (~> 1.0.0)
 
 GEM
@@ -29,5 +29,5 @@ PLATFORMS
 
 DEPENDENCIES
   pry
-  rack-woothee!
+  rack-user_agent!
   sinatra

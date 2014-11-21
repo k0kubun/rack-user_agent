@@ -2,4 +2,4 @@ source "https://rubygems.org"
 
 gem "sinatra"
 gem "pry"
-gem "rack-woothee", path: ".."
+gem "rack-user_agent", path: ".."

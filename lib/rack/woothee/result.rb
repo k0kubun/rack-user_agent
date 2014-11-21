@@ -1,5 +1,5 @@
 module Rack
-  class Woothee
+  class UserAgent
     module Result
       def device_type
         woothee_result[:category]

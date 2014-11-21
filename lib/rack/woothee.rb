@@ -6,7 +6,7 @@ require "rack/woothee/version"
 require 'rack/woothee/railtie' if defined?(Rails::Railtie)
 
 module Rack
-  class Woothee
+  class UserAgent
     def initialize(app, options = {})
       @app = app
     end
@@ -18,8 +18,8 @@ module Rack
   end
 
   class Request
-    include Rack::Woothee::Checker
-    include Rack::Woothee::Detector
-    include Rack::Woothee::Result
+    include Rack::UserAgent::Checker
+    include Rack::UserAgent::Detector
+    include Rack::UserAgent::Result
   end
 end

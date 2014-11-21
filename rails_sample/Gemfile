@@ -12,4 +12,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'pry'
 
-gem 'rack-woothee', path: '..'
+gem 'rack-user_agent', path: '..'

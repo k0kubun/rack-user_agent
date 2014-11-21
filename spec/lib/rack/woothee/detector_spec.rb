@@ -2,7 +2,7 @@ require_relative "../../../spec_helper"
 
 # Vendored from:
 # https://github.com/ihara2525/rack-smartphone_detector/blob/master/spec/rack-smartphone_detector_spec.rb
-describe "Rack::Woothee::Detector" do
+describe "Rack::UserAgent::Detector" do
   include Rack::Test::Methods
 
   SMARTPHONES = [
@@ -66,7 +66,7 @@ describe "Rack::Woothee::Detector" do
 
   let(:app) do
     dummy_app = ->(env) { [200, {}, "Hello World"] }
-    Rack::Woothee.new(dummy_app)
+    Rack::UserAgent.new(dummy_app)
   end
 
   describe "#from_smartphone?" do

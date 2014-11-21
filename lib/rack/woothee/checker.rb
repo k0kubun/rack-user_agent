@@ -1,7 +1,7 @@
 require "rack/woothee/result"
 
 module Rack
-  class Woothee
+  class UserAgent
     module Checker
       include Result
 

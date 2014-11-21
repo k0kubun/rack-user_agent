@@ -1,8 +1,8 @@
 module Rack
-  class Woothee
+  class UserAgent
     class Railtie < ::Rails::Railtie
-      initializer "rack-woothee.configure_rails_initialization" do |app|
-        app.config.middleware.insert_before(ActionDispatch::ParamsParser, Rack::Woothee)
+      initializer "rack-user_agent.configure_rails_initialization" do |app|
+        app.config.middleware.insert_before(ActionDispatch::ParamsParser, Rack::UserAgent)
       end
     end
   end

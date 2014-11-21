@@ -1,11 +1,11 @@
 require_relative "../../../spec_helper"
 
-describe "Rack::Woothee::Checker" do
+describe "Rack::UserAgent::Checker" do
   include Rack::Test::Methods
 
   let(:app) do
     dummy_app = ->(env) { [200, {}, "Hello World"] }
-    Rack::Woothee.new(dummy_app)
+    Rack::UserAgent.new(dummy_app)
   end
   let(:expects_by_ua) do
     {

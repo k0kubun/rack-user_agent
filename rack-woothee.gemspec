@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rack/woothee/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "rack-woothee"
-  spec.version       = Rack::Woothee::VERSION
+  spec.name          = "rack-user_agent"
+  spec.version       = Rack::UserAgent::VERSION
   spec.authors       = ["Takashi Kokubun"]
   spec.email         = ["takashikkbn@gmail.com"]
   spec.summary       = %q{Rack::Request extension for handling User-Agent.}
   spec.description   = %q{Rack::Request extension for handling User-Agent.}
-  spec.homepage      = "https://github.com/k0kubun/rack-woothee"
+  spec.homepage      = "https://github.com/k0kubun/rack-user_agent"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

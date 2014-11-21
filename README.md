@@ -1,21 +1,21 @@
-# Rack::Woothee [![Build Status](https://travis-ci.org/k0kubun/rack-woothee.svg)](https://travis-ci.org/k0kubun/rack-woothee)
+# Rack::UserAgent [![Build Status](https://travis-ci.org/k0kubun/rack-user_agent.svg)](https://travis-ci.org/k0kubun/rack-user_agent)
 
 Rack::Request extension for handling User-Agent.  
-Thanks to [woothee](https://github.com/woothee/woothee-ruby), Rack::Woothee supports various User-Agents.
+Thanks to [woothee](https://github.com/woothee/woothee-ruby), Rack::UserAgent supports various User-Agents.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rack-woothee'
+gem 'rack-user_agent'
 ```
 
 ## Usage
 
 ### Rails
 
-If you bundle "rack-woothee", Rack::Woothee will be automatically inserted when started.  
+If you bundle "rack-user_agent", Rack::UserAgent will be automatically inserted when started.  
 Additional methods for `request` will be available with no cost.
 
 ```ruby
@@ -44,14 +44,14 @@ end
 
 ### Sinatra
 
-You can also manually use Rack::Woothee for any Rack apps.
+You can also manually use Rack::UserAgent for any Rack apps.
 
 ```ruby
 require "sinatra"
 require "rack/woothee"
 
 configure do
-  use Rack::Woothee
+  use Rack::UserAgent
 end
 
 get "/" do
