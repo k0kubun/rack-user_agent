@@ -1,5 +1,6 @@
 require "woothee"
 require "rack/woothee/checker"
+require "rack/woothee/detector"
 require "rack/woothee/result"
 require "rack/woothee/version"
 require 'rack/woothee/railtie' if defined?(Rails::Railtie)
@@ -17,7 +18,8 @@ module Rack
   end
 
   class Request
-    include Rack::Woothee::Result
     include Rack::Woothee::Checker
+    include Rack::Woothee::Detector
+    include Rack::Woothee::Result
   end
 end

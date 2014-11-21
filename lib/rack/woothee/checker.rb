@@ -1,6 +1,10 @@
+require "rack/woothee/result"
+
 module Rack
   class Woothee
     module Checker
+      include Result
+
       def from_pc?
         device_type == :pc
       end
