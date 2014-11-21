@@ -82,6 +82,16 @@ end
 - request.from\_appliance?
 - request.from\_crawler?
 
+### Detectors
+APIs compatible with [rack-smartphone\_detector](https://github.com/ihara2525/rack-smartphone_detector)
+
+- request.smartphone\_version
+- request.from\_iphone?
+- request.from\_ipad?
+- request.from\_android?
+- request.from\_android\_tablet?
+- request.from\_windows\_phone?
+
 ## License
 
 MIT License
