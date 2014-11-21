@@ -1,13 +1,14 @@
-require "rack/user_agent/result"
+require "rack/user_agent/checker"
 
 # This module aims to provide APIs compatible with:
 # https://github.com/ihara2525/rack-smartphone_detector
 module Rack
   class UserAgent
     module Detector
-      include Result
+      include Checker
 
       def smartphone_version
+        return unless from_smartphone?
         suppress_unknown(os_version)
       end
 
