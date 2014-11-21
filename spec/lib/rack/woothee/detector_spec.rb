@@ -109,35 +109,35 @@ describe "Rack::Woothee::Detector" do
     end
   end
 
-  # describe "#from_iphone?" do
-  #   it "returns true if the request comes from iphone" do
-  #     user_agents("iPhone").each do |ua|
-  #       header "User-Agent", ua
-  #       get "/"
-  #       last_request.from_iphone?.must_equal true
-  #     end
-  #   end
-  # end
+  describe "#from_iphone?" do
+    it "returns true if the request comes from iphone" do
+      user_agents("iPhone").each do |ua|
+        header "User-Agent", ua
+        get "/"
+        last_request.from_iphone?.must_equal true
+      end
+    end
+  end
 
-  # describe "#from_ipad?" do
-  #   it "returns true if the request comes from ipad" do
-  #     user_agents("iPad").each do |ua|
-  #       header "User-Agent", ua
-  #       get "/"
-  #       last_request.from_ipad?.must_equal true
-  #     end
-  #   end
-  # end
+  describe "#from_ipad?" do
+    it "returns true if the request comes from ipad" do
+      user_agents("iPad").each do |ua|
+        header "User-Agent", ua
+        get "/"
+        last_request.from_ipad?.must_equal true
+      end
+    end
+  end
 
-  # describe "#from_android?" do
-  #   it "returns true if the request comes from android mobile" do
-  #     user_agents("Android").each do |ua|
-  #       header "User-Agent", ua
-  #       get "/"
-  #       last_request.from_android?.must_equal true
-  #     end
-  #   end
-  # end
+  describe "#from_android?" do
+    it "returns true if the request comes from android mobile" do
+      user_agents("Android").each do |ua|
+        header "User-Agent", ua
+        get "/"
+        last_request.from_android?.must_equal true
+      end
+    end
+  end
 
   # describe "#from_android_tablet?" do
   #   it "returns true if the request comes from android tablet" do

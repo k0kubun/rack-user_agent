@@ -8,6 +8,18 @@ module Rack
       include Result
 
       alias :smartphone_version :os_version
+
+      def from_iphone?
+        os == "iPhone"
+      end
+
+      def from_ipad?
+        os == "iPad"
+      end
+
+      def from_android?
+        os == "Android"
+      end
     end
   end
 end
