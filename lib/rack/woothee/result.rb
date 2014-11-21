@@ -10,7 +10,7 @@ module Rack
       end
 
       def os_version
-        suppress_unknown(woothee_result[:os_version])
+        woothee_result[:os_version]
       end
 
       def browser
@@ -29,14 +29,6 @@ module Rack
 
       def woothee_result
         env["rack.woothee"]
-      end
-
-      def suppress_unknown(version)
-        if version == "UNKNOWN"
-          nil
-        else
-          version
-        end
       end
     end
   end

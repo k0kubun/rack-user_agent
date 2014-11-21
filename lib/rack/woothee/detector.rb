@@ -8,6 +8,9 @@ module Rack
       include Result
 
       alias :smartphone_version :os_version
+      def smartphone_version
+        suppress_unknown(os_version)
+      end
 
       def from_iphone?
         os == "iPhone"
@@ -19,6 +22,16 @@ module Rack
 
       def from_android?
         os == "Android"
+      end
+
+      private
+
+      def suppress_unknown(version)
+        if version == "UNKNOWN"
+          nil
+        else
+          version
+        end
       end
     end
   end
