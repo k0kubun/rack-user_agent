@@ -1,7 +1,8 @@
 PATH
   remote: ..
   specs:
-    rack-user_agent (0.0.1)
+    rack-user_agent (0.2.1)
+      rack (~> 1.5)
       woothee (~> 1.0.0)
 
 GEM
