@@ -1,4 +1,4 @@
-# Rack::Woothee
+# Rack::Woothee [![Build Status](https://travis-ci.org/k0kubun/rack-woothee.svg)](https://travis-ci.org/k0kubun/rack-woothee)
 
 Rack::Request extension for handling User-Agent.  
 Thanks to [woothee](https://github.com/woothee/woothee-ruby), Rack::Woothee supports various User-Agents.
