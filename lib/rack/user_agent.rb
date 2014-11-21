@@ -1,9 +1,9 @@
 require "woothee"
-require "rack/woothee/checker"
-require "rack/woothee/detector"
-require "rack/woothee/result"
-require "rack/woothee/version"
-require 'rack/woothee/railtie' if defined?(Rails::Railtie)
+require "rack/user_agent/checker"
+require "rack/user_agent/detector"
+require "rack/user_agent/result"
+require "rack/user_agent/version"
+require 'rack/user_agent/railtie' if defined?(Rails::Railtie)
 
 module Rack
   class UserAgent

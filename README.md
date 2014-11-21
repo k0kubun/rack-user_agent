@@ -48,7 +48,7 @@ You can also manually use Rack::UserAgent for any Rack apps.
 
 ```ruby
 require "sinatra"
-require "rack/woothee"
+require "rack/user_agent"
 
 configure do
   use Rack::UserAgent

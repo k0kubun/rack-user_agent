@@ -1,4 +1,4 @@
-require "rack/woothee/result"
+require "rack/user_agent/result"
 
 # This module aims to provide APIs compatible with:
 # https://github.com/ihara2525/rack-smartphone_detector

@@ -1,6 +1,6 @@
 require "sinatra"
 require "pry"
-require "rack/woothee"
+require "rack/user_agent"
 
 configure do
   use Rack::UserAgent

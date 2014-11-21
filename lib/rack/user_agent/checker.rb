@@ -1,4 +1,4 @@
-require "rack/woothee/result"
+require "rack/user_agent/result"
 
 module Rack
   class UserAgent

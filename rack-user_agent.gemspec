@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rack/woothee/version'
+require 'rack/user_agent/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rack-user_agent"
