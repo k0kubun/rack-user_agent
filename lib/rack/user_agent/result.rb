@@ -28,7 +28,7 @@ module Rack
       private
 
       def woothee_result
-        env["rack.woothee"]
+        env["rack.woothee"] || {}
       end
     end
   end
