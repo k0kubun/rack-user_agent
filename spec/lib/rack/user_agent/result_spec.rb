@@ -28,4 +28,17 @@ describe "Rack::UserAgent::Result" do
       last_request.public_send(method).must_equal woothee_result[original]
     end
   end
+
+  describe "UNKNOWN category" do
+    let(:ua) { "ELB-HealthChecker/1.0" }
+
+    it "device_type should return symbol" do
+      header "User-Agent", ua
+      get "/"
+
+      woothee_result[:category].must_equal Woothee::VALUE_UNKNOWN
+      last_request.device_type.must_equal Woothee::VALUE_UNKNOWN.to_sym
+      last_request.device_type.class.must_equal Symbol
+    end
+  end
 end
