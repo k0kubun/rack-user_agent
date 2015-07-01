@@ -1,9 +1,15 @@
 module Rack
   class UserAgent
     module Result
+      UNKNOWN_VARIANT = :unknown
+
       def device_type
-        return :UNKNOWN if woothee_result[:category] == Woothee::VALUE_UNKNOWN
         woothee_result[:category]
+      end
+
+      def device_variant
+        return UNKNOWN_VARIANT if woothee_result[:category] == Woothee::VALUE_UNKNOWN
+        device_type
       end
 
       def os

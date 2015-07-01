@@ -20,16 +20,19 @@ describe "Rack::UserAgent::Result" do
     }
   end
 
-  it "returns proper woothee results" do
-    header "User-Agent", ua
-    get "/"
+  describe "#device_type" do
+    it "returns proper woothee results" do
+      header "User-Agent", ua
+      get "/"
 
-    mappings.each do |method, original|
-      last_request.public_send(method).must_equal woothee_result[original]
+      mappings.each do |method, original|
+        last_request.public_send(method).must_equal woothee_result[original]
+      end
     end
   end
 
-  describe "UNKNOWN category" do
+
+  describe "#device_variant" do
     let(:ua) { "ELB-HealthChecker/1.0" }
 
     it "device_type should return symbol" do
@@ -37,8 +40,8 @@ describe "Rack::UserAgent::Result" do
       get "/"
 
       woothee_result[:category].must_equal Woothee::VALUE_UNKNOWN
-      last_request.device_type.must_equal Woothee::VALUE_UNKNOWN.to_sym
-      last_request.device_type.class.must_equal Symbol
+      last_request.device_variant.must_equal Rack::UserAgent::Result::UNKNOWN_VARIANT
+      last_request.device_variant.class.must_equal Symbol
     end
   end
 end
