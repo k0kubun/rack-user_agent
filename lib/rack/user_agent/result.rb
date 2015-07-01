@@ -2,6 +2,7 @@ module Rack
   class UserAgent
     module Result
       def device_type
+        return :UNKNOWN if woothee_result[:category] == Woothee::VALUE_UNKNOWN
         woothee_result[:category]
       end
 
