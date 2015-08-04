@@ -28,6 +28,13 @@ describe "Rack::UserAgent::Detector" do
       ]
     },
     {
+      name: "iPod",
+      version: "8.0",
+      user_agents: [
+        "Mozilla/5.0 (iPod touch; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A365 Safari/600.1.4"
+      ]
+    },
+    {
       name: "Android",
       version: "4.0.1",
       user_agents: [
@@ -125,6 +132,16 @@ describe "Rack::UserAgent::Detector" do
         header "User-Agent", ua
         get "/"
         last_request.from_ipad?.must_equal true
+      end
+    end
+  end
+
+  describe "#from_ipod?" do
+    it "returns true if the request comes from ipod" do
+      user_agents("iPod").each do |ua|
+        header "User-Agent", ua
+        get "/"
+        last_request.from_ipod?.must_equal true
       end
     end
   end
