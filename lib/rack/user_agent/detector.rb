@@ -20,6 +20,10 @@ module Rack
         os == "iPad"
       end
 
+      def from_ipod?
+        os == "iPod"
+      end
+
       def from_android?
         os == "Android" && android_mobile?
       end
