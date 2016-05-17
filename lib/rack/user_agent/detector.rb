@@ -24,12 +24,20 @@ module Rack
         os == "iPod"
       end
 
+      def from_ios?
+        from_iphone? || from_ipad? || from_ipod?
+      end
+
       def from_android?
         os == "Android" && android_mobile?
       end
 
       def from_android_tablet?
         os == "Android" && !android_mobile?
+      end
+
+      def from_android_os?
+        from_android? || from_android_tablet?
       end
 
       def from_windows_phone?
