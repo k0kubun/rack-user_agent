@@ -39,6 +39,14 @@ describe "Rack::UserAgent::Detector" do
       ]
     },
     {
+      name: "UNKNOWN",
+      os: "iOS",
+      version: nil,
+      user_agents: [
+        "Blogos/1.13 CFNetwork/548.0.4 Darwin/11.0.0"
+      ]
+    },
+    {
       name: "Android",
       os: "Android",
       version: "4.0.1",

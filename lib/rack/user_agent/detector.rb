@@ -25,7 +25,7 @@ module Rack
       end
 
       def from_ios?
-        from_iphone? || from_ipad? || from_ipod?
+        from_iphone? || from_ipad? || from_ipod? || os == "iOS"
       end
 
       def from_android?
