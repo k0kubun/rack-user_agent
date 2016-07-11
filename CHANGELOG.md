@@ -1,5 +1,10 @@
 # Change Log
 
+## [v0.5.2](https://github.com/k0kubun/rack-user_agent/tree/v0.5.2) (2016-07-11)
+[Full Changelog](https://github.com/k0kubun/rack-user_agent/compare/v0.5.1...v0.5.2)
+
+- Support woothee 1.1+ [\#8](https://github.com/k0kubun/rack-user_agent/pull/8) ([amatsuda](https://github.com/amatsuda))
+
 ## [v0.5.1](https://github.com/k0kubun/rack-user_agent/tree/v0.5.1) (2016-05-28)
 [Full Changelog](https://github.com/k0kubun/rack-user_agent/compare/v0.5.0...v0.5.1)
 
