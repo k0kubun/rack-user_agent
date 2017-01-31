@@ -88,9 +88,12 @@ APIs compatible with [rack-smartphone\_detector](https://github.com/ihara2525/ra
 - request.smartphone\_version
 - request.from\_iphone?
 - request.from\_ipad?
+- request.from\_ipod?
 - request.from\_android?
 - request.from\_android\_tablet?
 - request.from\_windows\_phone?
+- request.from\_ios?
+- request.from\_android\_os?
 
 ## License
 
