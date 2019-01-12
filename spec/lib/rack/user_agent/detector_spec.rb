@@ -127,7 +127,11 @@ describe "Rack::UserAgent::Detector" do
         info[:user_agents].each do |ua|
           header "User-Agent", ua
           get "/"
-          last_request.smartphone_version.must_equal info[:version]
+          if info[:version].nil?
+            assert_nil last_request.smartphone_version
+          else
+            last_request.smartphone_version.must_equal info[:version]
+          end
         end
       end
     end
