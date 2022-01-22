@@ -1,4 +1,4 @@
-# Rack::UserAgent [![Build Status](https://travis-ci.org/k0kubun/rack-user_agent.svg)](https://travis-ci.org/k0kubun/rack-user_agent)
+# Rack::UserAgent [![test](https://github.com/k0kubun/rack-user_agent/actions/workflows/test.yml/badge.svg)](https://github.com/k0kubun/rack-user_agent/actions/workflows/test.yml)
 
 Rack::Request extension for handling User-Agent.  
 Thanks to [woothee](https://github.com/woothee/woothee-ruby), Rack::UserAgent supports various User-Agents.
