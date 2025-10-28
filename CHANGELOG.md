@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.6.0
+
+- Bump required Ruby version to 3.2
+
 ## [v0.5.3](https://github.com/k0kubun/rack-user_agent/tree/v0.5.3) (2022-01-22)
 
 [Full Changelog](https://github.com/k0kubun/rack-user_agent/compare/v0.5.2...v0.5.3)
